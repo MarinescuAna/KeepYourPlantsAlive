@@ -1,5 +1,4 @@
-﻿using KeepYourPlantsAlive.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,20 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KeepYourPlantsAlive
+namespace KeepYourPlantsAlive.Views
 {
-    public partial class Start : Form
+    public partial class StartUserControl : UserControl
     {
-        public Start()
+        public StartUserControl()
         {
+
             this.BackgroundImage = Properties.Resources.backgroundStart;
             InitializeComponent();
-        }
-
-        private void btnAddPlant_Click(object sender, EventArgs e)
-        {
-            AddFlowerForm addFlowerForm = new AddFlowerForm();
-            addFlowerForm.Show();
         }
     }
 }
