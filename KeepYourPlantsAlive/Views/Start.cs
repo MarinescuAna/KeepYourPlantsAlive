@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace KeepYourPlantsAlive
 {
-    public partial class Form1 : Form
+    public partial class Start : Form
     {
-        public Form1()
+        public Start()
         {
+            this.BackgroundImage = Properties.Resources.backgroundStart;
             InitializeComponent();
+            cmbFlowers.SelectedText = "--Select--";
         }
+
+
     }
 }
