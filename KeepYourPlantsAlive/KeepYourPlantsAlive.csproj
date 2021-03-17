@@ -49,6 +49,7 @@
     <Compile Include="Common\FilePaths.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\FlowerManagementController.cs" />
+    <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Views\AddFlowerForm.cs">
       <SubType>Form</SubType>
     </Compile>

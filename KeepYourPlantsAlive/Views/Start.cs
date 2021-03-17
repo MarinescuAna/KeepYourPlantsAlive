@@ -1,4 +1,5 @@
-﻿using KeepYourPlantsAlive.Views;
+﻿using KeepYourPlantsAlive.Controllers;
+using KeepYourPlantsAlive.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,16 +14,29 @@ namespace KeepYourPlantsAlive
 {
     public partial class Start : Form
     {
+        private readonly StartController _controller = new StartController();
         public Start()
         {
             this.BackgroundImage = Properties.Resources.backgroundStart;
             InitializeComponent();
+            Init();
         }
 
         private void btnAddPlant_Click(object sender, EventArgs e)
         {
             AddFlowerForm addFlowerForm = new AddFlowerForm();
+            addFlowerForm.FormClosed += new FormClosedEventHandler(AddFlowerForm_FormClosed);
             addFlowerForm.Show();
+        }
+
+        private void Init()
+        {
+            cmbFlowers.Items.AddRange(_controller.ReadFlowerNames().ToArray());
+        }
+        private void AddFlowerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            cmbFlowers.Items.Clear();
+            Init();
         }
     }
 }
