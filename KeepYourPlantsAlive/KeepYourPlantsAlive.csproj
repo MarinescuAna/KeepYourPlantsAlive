@@ -56,11 +56,11 @@
     <Compile Include="Views\AddFlowerForm.Designer.cs">
       <DependentUpon>AddFlowerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Start.cs">
+    <Compile Include="Views\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Start.Designer.cs">
-      <DependentUpon>Start.cs</DependentUpon>
+    <Compile Include="Views\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     <EmbeddedResource Include="Views\AddFlowerForm.resx">
       <DependentUpon>AddFlowerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Start.resx">
-      <DependentUpon>Start.cs</DependentUpon>
+    <EmbeddedResource Include="Views\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
