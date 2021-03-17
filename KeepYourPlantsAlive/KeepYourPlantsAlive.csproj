@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ConstString.cs" />
     <Compile Include="Common\FilePaths.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\FlowerManagementController.cs" />
     <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Controllers\ViewController.cs" />
     <Compile Include="Views\AddFlowerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\StartUserControl.cs">
+    <Compile Include="Views\FlowerDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\StartUserControl.Designer.cs">
-      <DependentUpon>StartUserControl.cs</DependentUpon>
+    <Compile Include="Views\FlowerDetailsControl.Designer.cs">
+      <DependentUpon>FlowerDetailsControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\AddFlowerForm.resx">
       <DependentUpon>AddFlowerForm.cs</DependentUpon>
@@ -86,6 +88,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FlowerDetailsControl.resx">
+      <DependentUpon>FlowerDetailsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataFiles\FlowersName.txt" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\log32o.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

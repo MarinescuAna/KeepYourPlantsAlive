@@ -29,10 +29,11 @@ namespace KeepYourPlantsAlive.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFlowerForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtFlowerName = new System.Windows.Forms.TextBox();
-            this.btnSaveFlower = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSaveFlower = new System.Windows.Forms.Button();
+            this.txtFlowerName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,13 +48,16 @@ namespace KeepYourPlantsAlive.Views
             this.panel1.Size = new System.Drawing.Size(322, 198);
             this.panel1.TabIndex = 0;
             // 
-            // txtFlowerName
+            // label1
             // 
-            this.txtFlowerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFlowerName.Location = new System.Drawing.Point(37, 77);
-            this.txtFlowerName.Name = "txtFlowerName";
-            this.txtFlowerName.Size = new System.Drawing.Size(222, 29);
-            this.txtFlowerName.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Location = new System.Drawing.Point(32, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Flower name";
             // 
             // btnSaveFlower
             // 
@@ -68,16 +72,13 @@ namespace KeepYourPlantsAlive.Views
             this.btnSaveFlower.UseVisualStyleBackColor = false;
             this.btnSaveFlower.Click += new System.EventHandler(this.btnSaveFlower_Click);
             // 
-            // label1
+            // txtFlowerName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(32, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Flower name";
+            this.txtFlowerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFlowerName.Location = new System.Drawing.Point(37, 77);
+            this.txtFlowerName.Name = "txtFlowerName";
+            this.txtFlowerName.Size = new System.Drawing.Size(222, 29);
+            this.txtFlowerName.TabIndex = 0;
             // 
             // AddFlowerForm
             // 
@@ -86,6 +87,8 @@ namespace KeepYourPlantsAlive.Views
             this.BackgroundImage = global::KeepYourPlantsAlive.Properties.Resources.backgroundStart;
             this.ClientSize = new System.Drawing.Size(949, 552);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddFlowerForm";
             this.Text = "AddFlowerForm";
             this.panel1.ResumeLayout(false);

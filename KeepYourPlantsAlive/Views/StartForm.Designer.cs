@@ -29,11 +29,12 @@ namespace KeepYourPlantsAlive
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbFlowers = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnAddPlant = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
@@ -59,7 +60,7 @@ namespace KeepYourPlantsAlive
             this.panel2.BackColor = System.Drawing.Color.MintCream;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cmbFlowers);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnView);
             this.panel2.Controls.Add(this.btnAddPlant);
             this.panel2.Location = new System.Drawing.Point(650, 298);
             this.panel2.Name = "panel2";
@@ -80,6 +81,7 @@ namespace KeepYourPlantsAlive
             // 
             // cmbFlowers
             // 
+            this.cmbFlowers.AccessibleName = "";
             this.cmbFlowers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFlowers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbFlowers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,20 +90,22 @@ namespace KeepYourPlantsAlive
             this.cmbFlowers.Name = "cmbFlowers";
             this.cmbFlowers.Size = new System.Drawing.Size(275, 28);
             this.cmbFlowers.TabIndex = 2;
+            this.cmbFlowers.Text = "--Select--";
             // 
-            // button2
+            // btnView
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.DarkGreen;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(198, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 61);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View Plant";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnView.Font = new System.Drawing.Font("Monotype Corsiva", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnView.Location = new System.Drawing.Point(198, 176);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(177, 61);
+            this.btnView.TabIndex = 1;
+            this.btnView.Text = "View Plant";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnAddPlant
             // 
@@ -137,6 +141,8 @@ namespace KeepYourPlantsAlive
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 808);
             this.Controls.Add(this.panelMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Start";
             this.Text = "KeepYourPlantsAlive";
             this.panelMain.ResumeLayout(false);
@@ -153,7 +159,7 @@ namespace KeepYourPlantsAlive
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbFlowers;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnAddPlant;
         private System.Windows.Forms.Label label1;
     }

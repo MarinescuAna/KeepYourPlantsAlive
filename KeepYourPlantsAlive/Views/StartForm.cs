@@ -1,4 +1,5 @@
-﻿using KeepYourPlantsAlive.Controllers;
+﻿using KeepYourPlantsAlive.Common;
+using KeepYourPlantsAlive.Controllers;
 using KeepYourPlantsAlive.Views;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,20 @@ namespace KeepYourPlantsAlive
         {
             cmbFlowers.Items.Clear();
             Init();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if(cmbFlowers.Text.Equals(ConstString.Select))
+            {  
+                MessageBox.Show(ConstString.SelectName_Error,ConstString.Error,MessageBoxButtons.OK,MessageBoxIcon.Stop);
+            }
+            else
+            {
+                panelMain.Controls.Clear();
+                panelMain.Controls.Add(new FlowerDetailsControl(cmbFlowers.Text));
+            }
+
         }
     }
 }

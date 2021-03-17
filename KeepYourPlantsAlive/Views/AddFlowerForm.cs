@@ -1,4 +1,5 @@
-﻿using KeepYourPlantsAlive.Controllers;
+﻿using KeepYourPlantsAlive.Common;
+using KeepYourPlantsAlive.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace KeepYourPlantsAlive.Views
         {
             if(!_flowerManagementController.AddNewFlower(txtFlowerName.Text.ToUpper()))
             {
-                MessageBox.Show("The name already exists!");
+                MessageBox.Show(ConstString.AlreadyExistsName_Error, ConstString.Error, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             {
