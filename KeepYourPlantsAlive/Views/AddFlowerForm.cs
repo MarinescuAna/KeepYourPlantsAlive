@@ -20,7 +20,7 @@ namespace KeepYourPlantsAlive.Views
             InitializeComponent();
         }
 
-        private void btnSaveFlower_Click(object sender, EventArgs e)
+        private void BtnSaveFlower_Click(object sender, EventArgs e)
         {
             if(!_flowerManagementController.AddNewFlower(txtFlowerName.Text.ToUpper()))
             {

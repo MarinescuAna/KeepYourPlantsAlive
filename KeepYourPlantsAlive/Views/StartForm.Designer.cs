@@ -51,7 +51,7 @@ namespace KeepYourPlantsAlive
             this.panelMain.Controls.Add(this.label1);
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1097, 811);
+            this.panelMain.Size = new System.Drawing.Size(1097, 807);
             this.panelMain.TabIndex = 0;
             // 
             // panel2
@@ -62,7 +62,7 @@ namespace KeepYourPlantsAlive
             this.panel2.Controls.Add(this.cmbFlowers);
             this.panel2.Controls.Add(this.btnView);
             this.panel2.Controls.Add(this.btnAddPlant);
-            this.panel2.Location = new System.Drawing.Point(650, 298);
+            this.panel2.Location = new System.Drawing.Point(650, 294);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 254);
             this.panel2.TabIndex = 3;
@@ -129,7 +129,7 @@ namespace KeepYourPlantsAlive
             this.label1.BackColor = System.Drawing.Color.MintCream;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(355, 116);
+            this.label1.Location = new System.Drawing.Point(355, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(752, 97);
             this.label1.TabIndex = 2;
@@ -139,7 +139,7 @@ namespace KeepYourPlantsAlive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 808);
+            this.ClientSize = new System.Drawing.Size(1096, 804);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

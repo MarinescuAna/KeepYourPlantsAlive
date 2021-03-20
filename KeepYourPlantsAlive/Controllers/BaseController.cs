@@ -13,6 +13,11 @@ namespace KeepYourPlantsAlive.Controllers
         private StreamWriter _streamWriter;
         protected List<string> ReadFromFileByPath(string filePath)
         {
+            if (!File.Exists(filePath))
+            {
+                return new List<string>();
+            }
+
             try
             {
                 _streamReader = new StreamReader(filePath);

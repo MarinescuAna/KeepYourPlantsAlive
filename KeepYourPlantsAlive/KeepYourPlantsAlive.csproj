@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,7 @@
     <Compile Include="Controllers\FlowerManagementController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Controllers\ViewController.cs" />
+    <Compile Include="Models\Entry.cs" />
     <Compile Include="Views\AddFlowerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,8 +111,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataFiles\FlowersName.txt" />
+    <Content Include="Resources\happPlant.png" />
+    <Content Include="Resources\happyPlant.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\log32o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataFiles\ValuesRead\" />
+    <Folder Include="DataFiles\WaterDates\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

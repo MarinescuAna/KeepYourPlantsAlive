@@ -28,6 +28,7 @@ namespace KeepYourPlantsAlive
             AddFlowerForm addFlowerForm = new AddFlowerForm();
             addFlowerForm.FormClosed += new FormClosedEventHandler(AddFlowerForm_FormClosed);
             addFlowerForm.Show();
+           
         }
 
         private void Init()
@@ -50,6 +51,7 @@ namespace KeepYourPlantsAlive
             {
                 panelMain.Controls.Clear();
                 panelMain.Controls.Add(new FlowerDetailsControl(cmbFlowers.Text));
+                
             }
 
         }

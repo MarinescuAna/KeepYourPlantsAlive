@@ -70,7 +70,7 @@ namespace KeepYourPlantsAlive.Views
             this.btnSaveFlower.TabIndex = 1;
             this.btnSaveFlower.Text = "Save";
             this.btnSaveFlower.UseVisualStyleBackColor = false;
-            this.btnSaveFlower.Click += new System.EventHandler(this.btnSaveFlower_Click);
+            this.btnSaveFlower.Click += new System.EventHandler(this.BtnSaveFlower_Click);
             // 
             // txtFlowerName
             // 

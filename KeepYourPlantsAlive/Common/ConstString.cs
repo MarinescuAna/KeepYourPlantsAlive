@@ -8,6 +8,7 @@ namespace KeepYourPlantsAlive.Common
 {
     public static class ConstString
     {
+        public static readonly string Txt = ".txt";
         public static readonly string Select = "--Select--";
         public static readonly string SelectPort = "--Select port--";
         public static readonly string SelectName_Error = "Select a name first!!";
