@@ -63,7 +63,7 @@ namespace KeepYourPlantsAlive.Views
         private void InitImageStoreValues(int value)
         {
             _valuesEnter.Add(value);
-            picFlowers.ImageLocation = value >= 250 ? FilePaths.FlowerHappyPath : FilePaths.FlowerSadPath;
+            picFlowers.ImageLocation = value < 500 ? FilePaths.FlowerHappyPath : FilePaths.FlowerSadPath;
         }
         private void InitTable()
         {
@@ -93,15 +93,19 @@ namespace KeepYourPlantsAlive.Views
                 serialPort.PortName = cmbPort.Text.ToString();
                 serialPort.BaudRate= 9600;
                 serialPort.Open();
-                for (var count = 0; count < 30; count++)
+                for (var count = 0; count < 40; count++)
                 {
                     string oneLine = serialPort.ReadLine();
                     InitImageStoreValues(int.Parse(oneLine));
                     txtValuesRead.AppendText($"\n{oneLine}");
-                    System.Threading.Thread.Sleep(500);
+                    System.Threading.Thread.Sleep(1000);
                 }
                 serialPort.Close();
                 _controller.WriteValue(_valuesEnter.Min().ToString(), _valuesEnter.Max().ToString());
+                if (_valuesEnter.Max() - _valuesEnter.Min() > 100)
+                { 
+                    _controller.WriteValueWater(); 
+                }
             }
         }
         private void ChkKeyboard_CheckedChanged(object sender, EventArgs e)
